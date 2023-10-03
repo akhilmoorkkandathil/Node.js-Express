@@ -288,22 +288,31 @@
 // }
 
 
-const s = 'leetccccccode'
-let count=1
-let val =0
-for(let i=0;i<s.length;i++){
+// const s = 'leetccccccode'
+// let count=1
+// let val =0
+// for(let i=0;i<s.length;i++){
 
-    if(s[i]==s[i+1]){
-        count++
-    }else{
-        count=1
-    }
-    if(count>val){
-        val=count
-    }
+//     if(s[i]==s[i+1]){
+//         count++
+//     }else{
+//         count=1
+//     }
+//     if(count>val){
+//         val=count
+//     }
     
+// }
+// console.log(val);
+
+
+let nums = [1,2,3,4,1,2,3,4]
+
+const n=4
+
+for(let i=0;i<nums.length;i++){
+    if(i%2===1){
+       nums =nums.replace(nums[i],nums[i+n])
+    }
 }
-console.log(val);
-
-
-
+console.log(nums);

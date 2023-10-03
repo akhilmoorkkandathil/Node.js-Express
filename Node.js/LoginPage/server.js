@@ -3,10 +3,10 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 
-// Importing Libraies that we installed using npm
+// Importing Libraies
 const express = require("express")
 const app = express()
-const bcrypt = require("bcrypt") // Importing bcrypt package
+const bcrypt = require("bcrypt") 
 const passport = require("passport")
 const initializePassport = require("./passport-config")
 const flash = require("express-flash")
@@ -87,6 +87,8 @@ app.delete("/logout", (req, res) => {
         
     })
 })
+
+
 
 function checkAuthenticated(req, res, next){
     if(req.isAuthenticated()){
